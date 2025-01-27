@@ -10,7 +10,7 @@ const app = express();
 
 const port = 3001;
 
-const mongourl= "mongodb://localhost:27017/Expensetracker"
+const mongourl= "mongodb+srv://ashmika2005:ash@cluster0.pjy6aa4.mongodb.net/ExpenseTracker";
 mongoose.connect(mongourl)
 .then(()=>{
     console.log("Database Connected successfully")
@@ -104,6 +104,14 @@ app.delete("/api/expenses/:id", async (req, res) => {
         res.status(500).json({ message: "Error in deleting the expense" });
     }
 });
+
+
+
+
+
+
+
+
 
 
 
